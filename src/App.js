@@ -24,6 +24,12 @@ function App() {
     setTodos(todos.filter((_, i) => i !== index));
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      addTodo();
+    }
+  };
+
   return (
     <div className='App'>
       <div className='container'>
@@ -31,12 +37,12 @@ function App() {
           Mini TaskList App 📚
         </h1>
         <input 
-        type='text'
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder='Tambahkan tugas'
-        >
-        </input>
+          type='text'
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyPress={handleKeyPress}
+          placeholder='Tambahkan tugas'
+        />
         <button onClick={addTodo} id='addTaskButton'>Tambahkan</button>
         <ul>
           {todos.map((todo, index) => (
