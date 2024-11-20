@@ -12,7 +12,7 @@ body, .App {
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  /* background-color: #2152ad; */
+  background: transparent;
   animation: backgroundChange 15s ease infinite;
 }
 
