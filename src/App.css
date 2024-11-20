@@ -11,7 +11,7 @@ body, .App {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   /* background-color: #2152ad; */
   animation: backgroundChange 15s ease infinite;
 }
@@ -37,7 +37,7 @@ body, .App {
 
 .container {
   background: #fff;
-  margin-bottom: 40px ;
+  margin-bottom: 0px ;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
