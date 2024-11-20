@@ -1,38 +1,102 @@
-.App {
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* General app styling */
+body, .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-color: #2152ad; */
+  animation: backgroundChange 15s ease infinite;
+}
+
+/* Menambahkan keyframes untuk animasi background */
+@keyframes backgroundChange {
+  0% {
+    background-color: #2152ad;
+  }
+  25% {
+    background-color: #21ad7c;
+  }
+  50% {
+    background-color: #ad2152;
+  }
+  75% {
+    background-color: #7c21ad;
+  }
+  100% {
+    background-color: #2152ad;
+  }
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button#addTaskButton {
+  padding: 10px 40px;
+  margin-bottom: 10px;
+  background-color: rgb(34, 34, 34);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button#addTaskButton:hover {
+  background-color: rgb(189, 186, 186);
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+  margin: 5px 0;
+  background: #e6e6e6;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul li span {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+  transition: color 0.2s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li span:hover {
+  color: darkred;
 }
